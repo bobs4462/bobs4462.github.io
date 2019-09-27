@@ -7,4 +7,4 @@
 
 ![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/6%20вопросов%20Ramus_files/model.png)
 
-C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab1.htm)
+C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab1/index.htm)
