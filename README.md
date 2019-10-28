@@ -27,4 +27,4 @@ C моделью можно ознакомиться по [ссылке](https:/
 
 ![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab2/A2/model.png)
 
-C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab2/index.html)
+C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab2/A-0.html)
