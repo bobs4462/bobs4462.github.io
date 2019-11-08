@@ -36,6 +36,10 @@ C моделью можно ознакомиться по [ссылке](https:/
 
 * DFD-диаграмма шага *Оценка выполненной работы*:
 
-![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab2/1b/model.png)
+![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab3/1b/model.png)
 
 C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab3/1b.html?id=42&w=1024&h=768)
+
+* Диаграмма последовательностей сделанная с помощью инструмента PlantUML ([код](https://bobs4462.github.io/lab3/sequence.uml)
+
+![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab3/sequence.png)
