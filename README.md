@@ -7,7 +7,7 @@
 
 ![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab1/6%20вопросов%20Ramus_files/model.png)
 
-C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab1/index.htm)
+C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab1/index.htm?id=3)
 
 * Диаграмма классов 
 
@@ -27,4 +27,15 @@ C моделью можно ознакомиться по [ссылке](https:/
 
 ![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab2/A2/model.png)
 
-C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab2/A-0.html)
+C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab2/A-0.html?id=3)
+
+
+## Лабораторная работа №3
+
+Декомпозиция шага *Оценка выполненной работы* в процессе "Создание скульптуры" в RAMUS (программное средство разработки структурно-функциональных моделей)
+
+* DFD-диаграмма шага *Оценка выполненной работы*:
+
+![none](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab2/1b/model.png)
+
+C моделью можно ознакомиться по [ссылке](https://bobs4462.github.io/lab3/1b.html?id=42&w=1024&h=768)
