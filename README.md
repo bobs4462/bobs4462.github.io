@@ -53,6 +53,7 @@ C моделью можно ознакомиться по [ссылке](https:/
   веб-шаблонов и разработка системы шаблонизации на их основе
   
 * Разработка диаграмм в RAMUS
+
 **Контекстная диаграмма**
 ![Контекстная диаграмма](https://raw.githubusercontent.com/bobs4462/bobs4462.github.io/master/course_work/TEMPLATE_files/model.png)
 
