@@ -1,0 +1,60 @@
+@startuml
+skinparam actor {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+autonumber
+
+actor "Скульптор" as sculptor
+
+control "Техника создания скульптуры" as technique
+
+boundary "карандаш" as pencil
+
+entity "Бумага" as paper
+control "эскиз" as schematics
+entity "маркер" as marker
+database "БД скульптурных работ" as dbsw
+entity "фреза" as graver
+entity "камень" as stone
+actor "Эксперт по оценке" as expert
+database "БД стоимостей работ" as costdb
+entity "оценочное оборудывание" as eval
+
+boundary "Скульптура" as sculpture
+
+activate technique
+sculptor -> pencil: Рисовать
+pencil -> paper: Эскиз
+technique -> schematics
+paper -> schematics
+activate schematics
+== Создание скульптуры ==
+
+dbsw -> sculptor: Гайд по созданию скульптур
+schematics -> marker: Разметить камень
+technique -> marker
+technique -> graver
+marker -> stone: Разметка для черновых работ
+graver -> stone: Обработка камня
+stone -> sculpture: Внесение корректировок
+sculpture -> dbsw: Новые методы внесения корректировок
+
+== Оценка выполненных работ ==
+sculpture -> expert: Сравнение с эскизом
+techniqu -> expert
+expert -> schematics: Анализ эскиза
+expert -> sculpture: Скульптура с замечаниями
+sculpture -> expert: Анализ использованных методов
+dbsw -> sculpture: Новые методы создания эскизов
+sculpture -> dbsw: Новые материалы для скульптур
+costdb -> expert: Технологии создания скульптур
+eval -> sculpture: Стоимостная оценка
+costdb -> expert: Сравнение цен
+sculpture -> costb: Новая скульптура на рынке
+
+
+
+
+@enduml
