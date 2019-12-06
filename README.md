@@ -89,3 +89,4 @@ C моделью можно ознакомиться по [ссылке](https:/
 
 **DFD-декомпозиция процесса _Отправить документ_**
 ![Разработать веб-шаблон](https://raw.githubusercontent.com/bobs4462/bobs4462.github.io/master/course_work/TEMPLATE_files/model(9).png)
+
