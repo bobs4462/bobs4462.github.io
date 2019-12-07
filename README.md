@@ -104,4 +104,3 @@ C моделью можно ознакомиться по [ссылке](https:/
   - Построение ERD (диаграммы классов без атрибутов) для всех модулей
   - [Загрузка модели и диаграммы классов в репозиторий](https://github.com/bobs4462/bobs4462.github.io/blob/master/lab6/modules.uml.txt) <br>
  ![none](https://raw.githubusercontent.com/bobs4462/bobs4462.github.io/master/lab6/modules.png) 
-[Тут искать пример построения деревьев (uml 4)](https://github.com/okoff/okoff.github.io/tree/master/oop)
