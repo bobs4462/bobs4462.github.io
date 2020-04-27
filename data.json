@@ -1,40 +1,58 @@
 {
   "id": "A0",
-  "name": "Создание гайки",
-  "params": {"output": ["Гайка"], "mechanism": ["Отливочный аппарат","Фреза", "Штамповочный станок", "Прес", "Работник цеха", "Инжинер-технолог"], "control": ["Требования заказчика", "ГОСТ 5915-70"], "input": ["Руда"]},
+  "name": {"name": "Создание гайки", "type": "mission"},
+  "output": [{"name": "Гайка", "type": "Material"}],
+  "mechanism": [{"name": "Отливочный аппарат", "type": "Machine"}, {"name": "Фреза", "type": "Machine"}, {"name": "Штамповочный станок", "type": "Machine"}, {"name": "Прес", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+  "control": [{"name": "Требования заказчика", "type": "Management"}, {"name": "ГОСТ 5915-70", "type": "Management"}],
+  "input": [{"name": "Руда", "type": "Material"}],
   "root": true,
   "child": [
     {
         "id": "A1",
-        "name": "Отливка заготовки",
-        "params": { "output": ["Первичная заготовка"], "mechanism": ["Отливочный аппарат", "Работник цеха", "Инжинер-технолог"], "control": ["Требования заказчика", "ГОСТ 5915-70"], "input": ["Руда"]},
+        "name": {"name": "Отливка заготовки", "type": "mission"},
+        "output": [{"name": "Первичная заготовка", "type": "Material"}],
+        "mechanism": [{"name": "Отливочный аппарат", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+        "control": [{"name": "Требования заказчика", "type": "Management"}, {"name": "ГОСТ 5915-70", "type": "Management"}],
+        "input": [{"name": "Руда", "type": "Material"}],
         "root": false,
         "child": [
           {
               "id": "A11",
-              "name": "Отжиг",
-              "params": { "output": ["Метал в жидком состоянии"], "mechanism": ["Отливочный аппарат", "Работник цеха", "Инжинер-технолог"], "control": ["Требования заказчика", "ГОСТ 5915-70"], "input": ["Руда"]},
+              "name": {"name": "Отжиг", "type": "mission"},
+              "output": [{"name": "Метал в жидком состоянии", "type": "Material"}],
+              "mechanism": [{"name": "Отливочный аппарат", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+              "control": [{"name": "Требования заказчика", "type": "Management"}, {"name": "ГОСТ 5915-70", "type": "Management"}],
+              "input": [{"name": "Руда", "type": "Material"}],
               "root": false,
               "child": []
           },
           {
               "id": "A12",
-              "name": "Нормализация",
-              "params": { "output": ["Твердая заготовка"], "mechanism": ["Отливочный аппарат", "Работник цеха", "Инжинер-технолог"], "control": ["ГОСТ 5915-70"], "input": ["Метал в жидком состоянии"]},
+              "name": {"name": "Нормализация", "type": "mission"},
+              "output": [{"name": "Твердая заготовка", "type": "Material"}],
+              "mechanism": [{"name": "Отливочный аппарат", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+              "control": [{"name": "ГОСТ 5915-70", "type": "Management"}],
+              "input": [{"name": "Метал в жидком состоянии", "type": "Material"}],
               "root": false,
               "child": []
           },
           {
               "id": "A13",
-              "name": "Закалка",
-              "params": { "output": ["Закалаенная заготовка"], "mechanism": ["Отливочный аппарат", "Работник цеха", "Инжинер-технолог"], "control": ["ГОСТ 5915-70"], "input": ["Твердая заготовка"]},
+              "name": {"name": "Закалка", "type": "mission"},
+              "output": [{"name": "Закалаенная заготовка", "type": "Material"}],
+              "mechanism": [{"name": "Отливочный аппарат", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+              "control": [{"name": "ГОСТ 5915-70", "type": "Management"}],
+              "input": [{"name": "Твердая заготовка", "type": "Material"}],
               "root": false,
               "child": []
           },
           {
               "id": "A14",
-              "name": "Отпуск",
-              "params": { "output": ["Первичная заготовка"], "mechanism": ["Отливочный аппарат", "Работник цеха", "Инжинер-технолог"], "control": ["ГОСТ 5915-70"], "input": ["Закалаенная заготовка"]},
+              "name": {"name": "Отпуск", "type": "mission"},
+              "output": [{"name": "Первичная заготовка", "type": "Material"}],
+              "mechanism": [{"name": "Отливочный аппарат", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+              "control": [{"name": "ГОСТ 5915-70", "type": "Management"}],
+              "input": [{"name":"Закалаенная заготовка", "type": "Material"}],
               "root": false,
               "child": []
           }
@@ -42,22 +60,31 @@
       },
       {
         "id": "A2",
-        "name": "Ковка и штамповка",
-        "params": { "output": ["Закаленная деталь"],  ",mechanism": ["Штамповочный станок", "Работник цеха", "Инжинер-технолог"],  "control": ["ГОСТ 5915-70"], "input": ["Первичная заготовка"]},
+        "name": {"name": "Ковка и штамповка", "type": "mission"},
+        "output": [{"name": "Закаленная деталь", "type": "Material"}],
+        "mechanism": [{"name": "Штамповочный станок", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+        "control": [{"name": "ГОСТ 5915-70", "type": "Management"}],
+        "input": [{"name": "Первичная заготовка", "type": "Material"}],
         "root": false,
         "child": []
       },
       {
         "id": "A3",
-        "name": "Пресование и волочение",
-        "params": { "output": ["Черновая деталь"],  "mechanism": ["Прес", "Работник цеха", "Инжинер-технолог"],  "control": ["ГОСТ 5915-70"], "input": ["Закаленная деталь"]},
+        "name": {"name": "Пресование и волочение", "type": "mission"},
+        "output": [{"name": "Черновая деталь", "type": "Material"}],
+        "mechanism": [{"name": "Прес", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+        "control": [{"name": "ГОСТ 5915-70", "type": "Management"}],
+        "input": [{"name": "Закаленная деталь", "type": "Material"}],
         "root": false,
         "child": []
       },
       {
         "id": "A4 ",
-        "name": "Механическая обработка",
-        "params": { "output": ["Гайка"],  "mechanism": ["Фреза", "Работник цеха", "Инжинер-технолог"],  "control": ["Требования заказчика", "ГОСТ 5915-70"], "input": ["Черновая деталь"]},
+        "name": {"name": "Механическая обработка", "type": "mission"},
+        "output": [{"name": "Гайка", "type": "Material"}],
+        "mechanism": [{"name": "Фреза", "type": "Machine"}, {"name": "Работник цеха", "type": "Man"}, {"name": "Инжинер-технолог", "type": "Man"}],
+        "control": [{"name": "Требования заказчика", "type": "Management"}, {"name": "ГОСТ 5915-70", "type": "Management"}],
+        "input": [{"name": "Черновая деталь", "type": "Material"}],
         "root": false,
         "child": []
       }

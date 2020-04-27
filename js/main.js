@@ -5,8 +5,10 @@ var app = new Vue({
 		return { 
       fileList: [],
       json: null,
+      dialog: false,
       display_style: 'centered',
       data: [],
+      table_data: [],
       options: {
         sortObjectKeys: true,
         history: true,
@@ -49,15 +51,32 @@ var app = new Vue({
       this.display_style = 'right-aligned'
     },
     failureScan(json) {
+      this.table_data.push({})
       for (let [k, v] of Object.entries(json)) {
-        if (k === 'name') {
-          this.data.push({title: v})
-        }
-        if (k === 'child') {
-          v.forEach(i => { this.failureScan(i) })
+        switch(k) {
+          case 'name':
+            this.table_data.slice(-1)[0]['mission'] =  v['name']
+            break
+          case 'mechanism': 
+            this.table_data.slice(-1)[0]['machine'] =  v.map(i => {if(i.type.toLowerCase() === 'machine') return i.name})
+            this.table_data.slice(-1)[0]['man'] =  v.map(i => {if(i.type.toLowerCase() === 'man') return i.name})
+            break
+          case 'control': 
+            this.table_data.slice(-1)[0]['management'] =  v.map(i => {if(i.type.toLowerCase() === 'management') return i.name})
+            break
+          case 'input': 
+            this.table_data.slice(-1)[0]['material'] =  v.map(i => {if(i.type.toLowerCase() === 'material') return i.name})
+            break
+          case 'output': 
+            this.table_data.slice(-1)[0]['material'] =  v.map(i => {if(i.type.toLowerCase() === 'material') return i.name})
+            break
+          case 'child':
+            v.forEach(i => { this.failureScan(i) })
         }
       }
-
+      // console.log(this.table_data)
+      // console.log(json)
+      this.dialog = true
     },
     onError(e) {
       console.log(e)

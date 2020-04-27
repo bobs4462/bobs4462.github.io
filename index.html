@@ -71,9 +71,33 @@ html {
             <v-jsoneditor
               v-model="json" :options="options" :plus="false" :height="height" @error="onError">
             </v-jsoneditor>
-            </v-jsoneditor>
           </el-card>
         </el-main>
+        <el-dialog :visible.sync="dialog" width="75%">
+          <el-card shadow="always">
+            <el-table :data="table_data" border stripe size="mini" max-height="400">
+              <el-table-column label="Mission" prop="mission">
+              </el-table-column>
+              <el-table-column label="Machine" width="190">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.machine" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column label="Man" prop="man" width="190">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.man" type="success" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column label="Management" prop="management" width="190">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.management" type="warning" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column label="Material" prop="material" width="250">
+              </el-table-column>
+            </el-table>
+          </el-card>
+        </el-dialog>
       </el-container>
 		</div>
 		<script src="js/main.js"></script>
