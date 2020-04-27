@@ -65,10 +65,12 @@ var app = new Vue({
             this.table_data.slice(-1)[0]['management'] =  v.map(i => {if(i.type.toLowerCase() === 'management') return i.name})
             break
           case 'input': 
-            this.table_data.slice(-1)[0]['material'] =  v.map(i => {if(i.type.toLowerCase() === 'material') return i.name})
+            this.table_data.slice(-1)[0]['material'] = this.table_data.slice(-1)[0]['material'] || []
+            this.table_data.slice(-1)[0]['material'].push(...v.map(i => {if(i.type.toLowerCase() === 'material') return i.name}))
             break
           case 'output': 
-            this.table_data.slice(-1)[0]['material'] =  v.map(i => {if(i.type.toLowerCase() === 'material') return i.name})
+            this.table_data.slice(-1)[0]['material'] = this.table_data.slice(-1)[0]['material'] || []
+            this.table_data.slice(-1)[0]['material'].push(...v.map(i => {if(i.type.toLowerCase() === 'material') return i.name}))
             break
           case 'child':
             v.forEach(i => { this.failureScan(i) })

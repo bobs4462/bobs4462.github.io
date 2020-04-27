@@ -83,12 +83,12 @@ html {
                   <el-tag size="mini" v-for="m in scope.row.machine" :key="m" v-if="m">{{m}}</el-tag>
                 </template>
               </el-table-column>
-              <el-table-column label="Man" prop="man" width="190">
+              <el-table-column label="Man" width="190">
                 <template slot-scope="scope">
                   <el-tag size="mini" v-for="m in scope.row.man" type="success" :key="m" v-if="m">{{m}}</el-tag>
                 </template>
               </el-table-column>
-              <el-table-column label="Management" prop="management" width="190">
+              <el-table-column label="Management"width="190">
                 <template slot-scope="scope">
                   <el-tag size="mini" v-for="m in scope.row.management" type="warning" :key="m" v-if="m">{{m}}</el-tag>
                 </template>
