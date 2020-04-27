@@ -93,7 +93,10 @@ html {
                   <el-tag size="mini" v-for="m in scope.row.management" type="warning" :key="m" v-if="m">{{m}}</el-tag>
                 </template>
               </el-table-column>
-              <el-table-column label="Material" prop="material" width="250">
+              <el-table-column label="Material" width="250">
+                <template slot-scope="scope">
+                  <el-tag size="mini" v-for="m in scope.row.material" type="text" :key="m" v-if="m">{{m}}</el-tag>
+                </template>
               </el-table-column>
             </el-table>
           </el-card>
